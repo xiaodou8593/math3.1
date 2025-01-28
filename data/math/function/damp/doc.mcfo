@@ -1,0 +1,10 @@
+#math:damp/doc.mcfo
+
+# 阻尼的临时对象
+damp:{
+	<damp_x, int>,
+	<damp_v, int>,
+	<damp_k, int>,
+	<damp_b, int>,
+	<damp_f, int>
+}
