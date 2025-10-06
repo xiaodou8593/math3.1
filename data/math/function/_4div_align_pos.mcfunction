@@ -1,7 +1,7 @@
 #math:_4div_align_pos
 # 精确计算(res*10000)//inp
-# res: [-214748364, 214748364]
-# inp: [-2147483647, 2147483647]
+# res: [0, 214748364]
+# inp: [1, 2147483647]
 
 scoreboard players operation res int *= 10 int
 scoreboard players set sstemp0 int 1000
@@ -30,7 +30,5 @@ scoreboard players operation sstemp_res int *= 1000 int
 scoreboard players operation mod int = res int
 scoreboard players operation mod int *= sstemp_inp int
 scoreboard players operation mod int -= sstemp_res int
-scoreboard players operation mod int -= sstemp_inp int
-execute if score mod int matches 0.. run scoreboard players remove res int 1
-execute if score mod int matches ..-1 run scoreboard players operation mod int += sstemp_inp int
+execute if score mod int matches 1.. run function math:div_align_rmv
 scoreboard players operation mod int *= -1 int

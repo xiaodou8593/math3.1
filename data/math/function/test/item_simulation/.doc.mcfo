@@ -1,0 +1,7 @@
+#math:test/item_simulation
+
+# item_simulation的临时对象
+_this: {
+	<timer, int>,
+	<quat_phi,int>
+}

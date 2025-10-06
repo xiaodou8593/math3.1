@@ -30,7 +30,6 @@ scoreboard players operation sstemp_res int *= 1000 int
 scoreboard players operation mod int = res int
 scoreboard players operation mod int *= sstemp_inp int
 scoreboard players operation mod int -= sstemp_res int
-scoreboard players operation mod int -= sstemp_inp int
-execute if score mod int matches 0.. run scoreboard players remove res int 1
-execute if score mod int matches ..-1 run scoreboard players operation mod int += sstemp_inp int
+execute if score mod int matches 1.. run function math:div_align_rmv
 scoreboard players operation mod int *= -1 int
+execute if score mod int >= sstemp_inp int run function math:div_align_add
