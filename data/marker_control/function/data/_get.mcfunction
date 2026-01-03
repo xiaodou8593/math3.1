@@ -2,12 +2,12 @@
 # 获取实体NBT空间
 # 输出storage marker_control:io result
 
-execute unless score @s customdata_type matches 1.. run function marker_control:data/get_type
+# 初始化NBT存储空间
+execute unless score @s customdata_type matches 0.. run function marker_control:data/init_branch
 
-execute if score @s customdata_type matches 1 run data modify storage marker_control:io result set from entity @s ArmorItems[3].tag
-execute if score @s customdata_type matches 2 run data modify storage marker_control:io result set from entity @s Item.tag
-execute if score @s customdata_type matches 3 run data modify storage marker_control:io result set from entity @s item.tag
-execute if score @s customdata_type matches 4 run data modify storage marker_control:io result set from entity @s ArmorItems[3].components.minecraft:custom_data
-execute if score @s customdata_type matches 5 run data modify storage marker_control:io result set from entity @s Item.components.minecraft:custom_data
-execute if score @s customdata_type matches 6 run data modify storage marker_control:io result set from entity @s item.components.minecraft:custom_data
-execute if score @s customdata_type matches 7 run data modify storage marker_control:io result set from entity @s data
+# 获取非玩家空间
+execute if score @s customdata_type matches 1 run return run data modify storage marker_control:io result set from entity @s data.marker_control_storage
+
+# 获取玩家空间
+execute store result storage marker_control:io index int 1 run scoreboard players get @s marker_control_id
+function marker_control:data/get_player with storage marker_control:io {}

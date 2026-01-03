@@ -6,9 +6,9 @@ forceload add -1 -1 1 1
 
 # 全局实体
 kill 0-0-0-0-0
-summon marker 0 0 0 {Tags:["math_marker"],UUID:[I;0,0,0,0],CustomName:'"math_marker"'}
+summon marker 0 0 0 {Tags:["math_marker"],UUID:[I;0,0,0,0],CustomName:"math_marker"}
 kill 0-0-0-0-1
-summon item 0 -67 0 {Tags:["uuid_marker","upd_age"],UUID:[I;0,0,0,1],CustomName:'"uuid_marker"',NoGravity:1b,Item:{id:"minecraft:glass",Count:1b}}
+summon item 0 -67 0 {Tags:["uuid_marker","upd_age"],UUID:[I;0,0,0,1],CustomName:"uuid_marker",NoGravity:1b,Item:{id:"minecraft:glass",Count:1b}}
 
 # 主循环
 schedule function marker_control:tick 1t replace
@@ -21,6 +21,7 @@ scoreboard objectives add int dummy
 scoreboard objectives add timer dummy
 scoreboard objectives add killtime dummy
 scoreboard objectives add customdata_type dummy
+scoreboard objectives add marker_control_id dummy
 
 # 设置常量
 scoreboard players set -10000 int -10000
@@ -66,3 +67,8 @@ scoreboard players set 10000000 int 10000000
 scoreboard players set 100000000 int 100000000
 scoreboard players set 1000000000 int 1000000000
 scoreboard players set 1103515245 int 1103515245
+
+# 初始化玩家空间
+data modify storage marker_control:io player_space set value []
+data modify storage marker_control:io free_addr set value []
+scoreboard players set #id marker_control_id -1
