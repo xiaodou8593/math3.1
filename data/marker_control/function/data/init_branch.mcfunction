@@ -5,5 +5,5 @@
 execute if entity @s[type=minecraft:player] run return run function marker_control:data/init_player
 
 # 初始化非玩家空间
-data modify entity @s data set value {marker_control_storage:{}}
+data modify entity @s data.marker_control_storage set value {}
 scoreboard players set @s customdata_type 1

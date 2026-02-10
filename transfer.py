@@ -24,7 +24,7 @@ if len(args.mcpath) < 2:
 
 re_file_mcpath = re.compile(r'(?:.*?)function\s([a-z0-9\-_\.]*:[a-z0-9\-_\./]*)|(?:.*?)"([a-z0-9\-_\.]*:[a-z0-9\-_\./]*)"|#(?:.*?)([a-z0-9\-_\.]*:[a-z0-9\-_\./]*)')
 re_mcpath = re.compile(r'([a-z0-9\-_\.]*):([a-z0-9\-_\./]*)')
-re_path = re.compile(r'(?:.*/+data/+)([a-z0-9\-_\.]*)/+functions/+(.*)')
+re_path = re.compile(r'(?:.*/+data/+)([a-z0-9\-_\.]*)/+function/+(.*)')
 re_basename = re.compile(r'(?:.*)\.([a-z0-9\-_]+)$')
 
 def mcpath2path(mcpath:str):
@@ -34,7 +34,7 @@ def mcpath2path(mcpath:str):
         exit()
     namespace = m.group(1)
     func_path = m.group(2)
-    path = r"%s/data/%s/functions/%s"%(os.getcwd(), namespace, func_path)+("" if not func_path or func_path[-1] == "/" else ".mcfunction")
+    path = r"%s/data/%s/function/%s"%(os.getcwd(), namespace, func_path)+("" if not func_path or func_path[-1] == "/" else ".mcfunction")
     logger.debug("namespace: %s, path: %s"%(namespace, func_path))
     logger.debug(path)
     return path
