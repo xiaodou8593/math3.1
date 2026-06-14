@@ -1,4 +1,4 @@
-#math:hpo/float/_mult
+#math:float/_mult
 # 计算浮点数乘法
 # 输入乘数ifloat
 

@@ -14,9 +14,13 @@ scoreboard objectives add n dummy
 # 函数调用栈
 data modify storage math:io rec set value [{}]
 
-#临时对象初始化
+# 临时对象初始化
 data modify storage math:io rotation set value [0.0f,0.0f]
 data modify storage math:io xyz set value [0.0d,0.0d,0.0d]
 data modify storage math:io xyzw set value [0.0f,0.0f,0.0f,0.0f]
 data modify storage math:io scale set value [0.0f,0.0f,0.0f]
 data modify storage math:io translation set value [0.0f,0.0f,0.0f]
+
+
+# 初始化子模块
+function math:float/init
