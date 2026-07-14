@@ -1,0 +1,77 @@
+﻿<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="10" y1="6" x2="54" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb2b6"/>
+      <stop offset="0.22" stop-color="#e54855"/>
+      <stop offset="0.62" stop-color="#a90f24"/>
+      <stop offset="1" stop-color="#5d0715"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="9" y1="5" x2="55" y2="59" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe6e9"/>
+      <stop offset="0.45" stop-color="#ff6d78"/>
+      <stop offset="1" stop-color="#6b0616"/>
+    </linearGradient>
+    <linearGradient id="gemA" x1="20" y1="13" x2="45" y2="38" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff1f2"/>
+      <stop offset="0.4" stop-color="#ff7a84"/>
+      <stop offset="1" stop-color="#9d0b22"/>
+    </linearGradient>
+    <linearGradient id="gemB" x1="26" y1="12" x2="42" y2="39" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffc9cd"/>
+      <stop offset="1" stop-color="#6f0617"/>
+    </linearGradient>
+    <filter id="shadow" x="-10" y="-10" width="84" height="84" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#31030c" flood-opacity="0.55"/>
+    </filter>
+    <filter id="glow" x="-18" y="-18" width="100" height="100" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.1" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 1  0 0.25 0 0 0.18  0 0 0.25 0 0.22  0 0 0 0.85 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="3" y="3" width="58" height="58" rx="14" fill="#3a030c"/>
+  <rect x="5" y="5" width="54" height="54" rx="12" fill="url(#bg)"/>
+  <rect x="5.5" y="5.5" width="53" height="53" rx="11.5" stroke="url(#rim)" stroke-width="3"/>
+  <rect x="8" y="8" width="48" height="48" rx="9" stroke="#ffd0d5" stroke-opacity="0.36" stroke-width="1"/>
+
+  <g opacity="0.23" stroke="#ffe2e5" stroke-width="1">
+    <path d="M14 48H51"/>
+    <path d="M14 39H51"/>
+    <path d="M14 30H51"/>
+    <path d="M18 18V51"/>
+    <path d="M29 14V51"/>
+    <path d="M40 14V51"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M31.5 11.5L45.5 19.2V35.3L31.5 43.5L17.5 35.3V19.2L31.5 11.5Z" fill="url(#gemA)" stroke="#ffe5e8" stroke-width="1.3"/>
+    <path d="M31.5 11.5V26.8L17.5 19.2L31.5 11.5Z" fill="#ffd5d8" fill-opacity="0.72"/>
+    <path d="M31.5 11.5L45.5 19.2L31.5 26.8V11.5Z" fill="#ff8d96" fill-opacity="0.74"/>
+    <path d="M17.5 19.2L31.5 26.8L31.5 43.5L17.5 35.3V19.2Z" fill="#c4142c" fill-opacity="0.58"/>
+    <path d="M45.5 19.2L31.5 26.8V43.5L45.5 35.3V19.2Z" fill="url(#gemB)" fill-opacity="0.68"/>
+    <path d="M17.5 19.2L31.5 26.8L45.5 19.2M31.5 11.5V43.5M17.5 35.3L31.5 26.8L45.5 35.3" stroke="#fff1f2" stroke-opacity="0.72" stroke-width="1"/>
+  </g>
+
+  <g filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M10.5 42.5C15.2 30.6 20.3 30.3 24.8 42.4C29.1 53.8 35.5 53.3 39.6 41.5C43.1 31.5 47.9 30.3 53.5 40.6" stroke="#fff7f8" stroke-width="3.15"/>
+    <path d="M10.5 42.5C15.2 30.6 20.3 30.3 24.8 42.4C29.1 53.8 35.5 53.3 39.6 41.5C43.1 31.5 47.9 30.3 53.5 40.6" stroke="#ff5966" stroke-width="1.15" opacity="0.95"/>
+    <path d="M14 50.5H53.5" stroke="#fff3f4" stroke-width="2.2"/>
+    <path d="M18 18.5V51.5" stroke="#fff3f4" stroke-width="2.2"/>
+    <path d="M15.5 21.2L18 18.3L20.6 21.2" stroke="#fff3f4" stroke-width="2.2"/>
+    <path d="M50.4 47.7L53.6 50.5L50.4 53.2" stroke="#fff3f4" stroke-width="2.2"/>
+  </g>
+
+  <g fill="#fff6f7" stroke="#9b0c20" stroke-width="0.65">
+    <circle cx="18" cy="37" r="2.25"/>
+    <circle cx="31.8" cy="49.1" r="2.25"/>
+    <circle cx="43.2" cy="35.6" r="2.25"/>
+  </g>
+
+  <g opacity="0.82" stroke="#fff0f2" stroke-width="1.15" stroke-linecap="round">
+    <path d="M48.4 15.5L53.2 20.3"/>
+    <path d="M53.2 15.5L48.4 20.3"/>
+    <path d="M11.5 13.8C13.9 11.6 16.2 11.6 18.6 13.8"/>
+    <path d="M13.2 16.8C14.6 15.6 15.8 15.6 17.2 16.8"/>
+  </g>
+</svg>

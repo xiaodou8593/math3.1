@@ -2,6 +2,7 @@
 # 初始化数学库
 
 # 基础设置
+function math:break_command_limit
 execute in minecraft:overworld run function marker_control:_init
 scoreboard players set 1024 int 1024
 scoreboard players set 2000 int 2000
@@ -24,3 +25,7 @@ data modify storage math:io translation set value [0.0f,0.0f,0.0f]
 
 # 初始化子模块
 function math:float/init
+
+# 初始化记录
+function math:_version
+scoreboard players operation math_init_version int = version int

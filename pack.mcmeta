@@ -1,6 +1,19 @@
 {
-   "pack": {
-      "pack_format": 61,
-      "description": "by-xiaodou123"
-   }
+    "pack":{
+        "description": "by-xiaodoou123",
+        "pack_format": 71,
+        "supported_formats": [71, 107],
+        "min_format": 71,
+        "max_format": [107, 1]
+    },
+    "overlays":{
+    	"entries":[
+		{
+			"directory":"gamerule_overlay",
+			"min_format": 71,
+			"max_format": 91,
+			"formats": [71,91]
+		}
+	]
+    }
 }
